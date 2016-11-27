@@ -1,0 +1,55 @@
+<head>
+<title>TESTING GROUNDS</title>
+
+<style>
+#test {
+	border-style: dotted;
+	border-width: thick;
+}	
+</style>
+</head>
+<body>
+<textarea id="message" rows=20 columns=80>
+moma
+momo
+mama
+</textarea>
+
+<button id="justabutton" onclick="content()">Variablize</button>
+
+<script language=JavaScript>
+
+var str = document.getElementById("message").value.split('\n') //Splits whatever is in the textarea into an array.
+var arr = []
+
+console.log(str)
+
+//Makes a unique string (variable?) for each str item. aka "line0", "line1", etc.
+for (x in str) {
+	console.log("line" +x)
+	arr = arr + "line" +x+ "\n"
+}
+var a = arr.split("\n") //Turns arr into an array.
+
+console.log(arr) //Not an array yet.
+console.log(a) //Array.
+
+
+/* My second attempt (Yeah...I know...wrong order.)
+for (x in str) {
+	var a[x] = str[x];
+	//console.log(line1)
+}
+*/
+
+//My first attempt at assigning line0(etc.) array I have managed to create to str array (yes, 'str' is an array of strings) segments. 
+//var a = str
+//console.log(a)
+
+
+</script>
+
+
+
+</body>
+
